@@ -1,0 +1,33 @@
+
+<div class="mar">
+
+    <p [ngStyle] = "{backgroundColor : getColor()}" >Title Page is {{pageStatus}}</p> <!-- ngStyle-->
+
+
+    <label>Title without 2 way Binding</label>
+    <input type="text" class="form-control" (input)="onUpdateTitle($event)"><!-- Using event in eventBinding (not 2 way binding)-->
+    <p>{{TitleName}}</p>
+
+    <label>Title- 2 way Binding</label>
+    <input type="text" class="form-control" [(ngModel)]= "Title_2wayBinding" ><!-- Using event in eventBinding (not 2 way binding)-->
+    <p>{{Title_2wayBinding}}</p>
+
+    <button type="button" class="btn btn-primary" [disabled]="!allowNewTitle" 
+    (click)="onCreatetitle()"> AddTitle
+    </button> <!-- (Click) Event Binding-->
+
+    <p>{{allowNewTitle}}</p> <!-- String Interpolation-->
+
+    <p [innerText]="allowNewTitle"></p> <!-- Property Binding-->
+
+    <p *ngIf="titleCreated; else noTitle">{{titleCreationStatus}}</p> <!-- ng if else-->
+    <ng-template #noTitle>
+        <p>No title Created</p>
+    </ng-template>
+
+    <p>binding works with {{title}} with {{getActiveStatus()}} status</p>
+
+
+    <p *ngFor="let title of titles; let i= index" [ngStyle] = "{backgroundColor : i > 2 ? 'blue' :'transparent'}" [ngClass]="{'white-text' : i > 2}" >{{title}}</p> <!-- ngFor, ngClass-->
+                                                                                 
+</div>

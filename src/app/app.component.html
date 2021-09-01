@@ -1,3 +1,26 @@
-<app-binding> </app-binding>
+<!-- **** for basic angular works **** -->
+<!-- <app-binding> </app-binding> -->  
 
-<!-- <router-outlet></router-outlet> -->
+<!-- **** for DataBinding deepDive **** -->
+<div class="" >
+    <app-cocktail #cocktail></app-cocktail>   
+    <hr>  
+    hi {{cocktail.server}} 
+    <app-server-element ></app-server-element>
+</div>
+
+<!-- **** for project **** -->
+<!-- <app-header></app-header>
+
+<div class="conatiner">
+    <div class="row">
+       <div class="col-md-12">
+           <app-recipes></app-recipes>
+           <app-shopping-list></app-shopping-list>          
+       </div>
+    </div>
+</div> -->
+
+<!-- <div class="">
+    <button class="btn btn-success" (click)="downloadAsPDF()"></button>
+</div> -->

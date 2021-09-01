@@ -49,4 +49,8 @@ export class BindingComponent implements OnInit {
     return this.pageStatus === "on" ? "green":"red";
   }
 
+  onRemoveTitle(id: any){
+    const position = id;
+    this.titles.splice(position, 1);
+  }
 }

@@ -9,7 +9,7 @@
     <p>{{TitleName}}</p>
 
     <label>Title- 2 way Binding</label>
-    <input type="text" class="form-control" [(ngModel)]= "Title_2wayBinding" ><!-- Using event in eventBinding (not 2 way binding)-->
+    <input type="text" class="form-control" [(ngModel)]= "Title_2wayBinding" ><!-- Using event in eventBinding (2 way binding)-->
     <p>{{Title_2wayBinding}}</p>
 
     <button type="button" class="btn btn-primary" [disabled]="!allowNewTitle" 
@@ -28,6 +28,6 @@
     <p>binding works with {{title}} with {{getActiveStatus()}} status</p>
 
 
-    <p *ngFor="let title of titles; let i= index" [ngStyle] = "{backgroundColor : i > 2 ? 'blue' :'transparent'}" [ngClass]="{'white-text' : i > 2}" >{{title}}</p> <!-- ngFor, ngClass-->
+    <p *ngFor="let title of titles; let i= index" [ngStyle] = "{backgroundColor : i > 2 ? 'blue' :'transparent'}" [ngClass]="{'white-text' : i > 2}" (click)="onRemoveTitle(i)">{{title}}</p> <!-- ngFor, ngClass-->
                                                                                  
 </div>

@@ -14,6 +14,8 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { CocktailComponent } from './cocktail/cocktail.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { TopPageComponent } from './top-page/top-page.component';
+import { BottomPageComponent } from './bottom-page/bottom-page.component';
 
 
 
@@ -29,7 +31,9 @@ import { ServerElementComponent } from './server-element/server-element.componen
     ShoppingListComponent,
     ShoppingEditComponent,
     CocktailComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    TopPageComponent,
+    BottomPageComponent
   ],
   imports: [
     BrowserModule,

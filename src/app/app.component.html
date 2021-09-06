@@ -1,15 +1,22 @@
 <!-- **** for basic angular works **** -->
 <!-- <app-binding> </app-binding> -->  
 
-<!-- **** for DataBinding deepDive **** -->
-<div class="" >
+<!-- **** for DataBinding deepDive input output decorator simple**** -->
+<!-- <div class="" >
     <app-cocktail #cocktail></app-cocktail>   
     <hr>  
     hi {{cocktail.server}} 
-    <app-server-element ></app-server-element>
+    <app-server-element [serverTag]="cocktail.server"></app-server-element>
+</div> -->
+
+<!-- **** for DataBinding deepDive input output decorator Complicated**** -->
+<div class="container" >
+    <app-top-page (newItemEvent)="addItem($event)" ></app-top-page>
+    <hr>  
+     <app-bottom-page *ngFor="let data of detailElements" [profile]="data"></app-bottom-page> 
 </div>
 
-<!-- **** for project **** -->
+<!-- **** for Angular project **** -->
 <!-- <app-header></app-header>
 
 <div class="conatiner">
@@ -21,6 +28,7 @@
     </div>
 </div> -->
 
+<!-- for PFD test -->
 <!-- <div class="">
     <button class="btn btn-success" (click)="downloadAsPDF()"></button>
 </div> -->

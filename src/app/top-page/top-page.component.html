@@ -1,8 +1,9 @@
 <p>top-page works!</p>
 
 
-FirstName:<input type="text" class="form-control" [(ngModel)]="fName">
+FirstName:<input type="text" class="form-control" [(ngModel)]="fName" #first_name>
 LastName:<input type="text" class="form-control" [(ngModel)]="lName">
 
 <button type="button" class="btn btn-primary" (click)="addNewItem()">Add Details</button>
 
+<button type="button" class="btn btn-primary" (click)="addNewItemusingLocal(first_name)">Add using local Reference Details</button>

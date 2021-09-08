@@ -16,6 +16,9 @@ import { CocktailComponent } from './cocktail/cocktail.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { TopPageComponent } from './top-page/top-page.component';
 import { BottomPageComponent } from './bottom-page/bottom-page.component';
+import { EvenNumbersComponent } from './even-numbers/even-numbers.component';
+import { OddNumbersComponent } from './odd-numbers/odd-numbers.component';
+import { GameControlComponent } from './game-control/game-control.component';
 
 
 
@@ -33,7 +36,10 @@ import { BottomPageComponent } from './bottom-page/bottom-page.component';
     CocktailComponent,
     ServerElementComponent,
     TopPageComponent,
-    BottomPageComponent
+    BottomPageComponent,
+    EvenNumbersComponent,
+    OddNumbersComponent,
+    GameControlComponent
   ],
   imports: [
     BrowserModule,

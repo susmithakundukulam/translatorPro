@@ -16,11 +16,20 @@ export class AppComponent {
   title = 'translator';
   status = "active";
   detailElements = [{fName:"", lName:""}];
+  evenElements = [];
+  oddElements=[];
 
   addItem(details:{fName:string, lName:string}){
       this.detailElements.push({fName:details.fName, lName:details.lName});
   }
 
+  addEven(number : any){
+    if(number % 2 == 0){
+      this.evenElements.push(number);
+    }else{
+      this.oddElements.push(number);
+    }
+  }
 
   // public downloadAsPDF() {
   //   const doc = new jsPDF();

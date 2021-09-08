@@ -10,21 +10,21 @@
 </div> -->
 
 <!-- **** for DataBinding deepDive input output decorator Complicated**** -->
-<div class="container" >
+<!-- <div class="container" >
     <app-top-page (newItemEvent)="addItem($event)" > 
         <p #content>TopPage content</p>
      </app-top-page>
     <hr>  
      <app-bottom-page *ngFor="let data of detailElements" [profile]="data"></app-bottom-page> 
-</div>
+</div> -->
 
 <!-- ****ANother Example for DataBinding deepDive input output decorator Complicated**** -->
-<!-- <div class="container">
+<div class="container">
     <app-game-control (messageEvent)="addEven($event)"></app-game-control>
     <app-even-numbers  *ngFor="let even of evenElements" [evenTag]="even"></app-even-numbers>
     <app-odd-numbers *ngFor="let odd of oddElements" [oddTag]="odd"></app-odd-numbers>
 
-</div> -->
+</div>
 
 <!-- for PDF test -->
 <!-- <div class="">

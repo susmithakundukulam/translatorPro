@@ -20,6 +20,8 @@ import { EvenNumbersComponent } from './even-numbers/even-numbers.component';
 import { OddNumbersComponent } from './odd-numbers/odd-numbers.component';
 import { GameControlComponent } from './game-control/game-control.component';
 import { BasicHighlightDirective } from 'src/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { MuchBetterHighlightDirective } from './muchbetter-highlight/much-better-highlight.directive';
 
 
 
@@ -41,7 +43,9 @@ import { BasicHighlightDirective } from 'src/basic-highlight/basic-highlight.dir
     EvenNumbersComponent,
     OddNumbersComponent,
     GameControlComponent,
-    BasicHighlightDirective
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    MuchBetterHighlightDirective
   ],
   imports: [
     BrowserModule,

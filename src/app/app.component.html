@@ -21,7 +21,9 @@
 <!-- ****ANother Example for DataBinding deepDive input output decorator Complicated**** -->
 <div class="container">
     <app-game-control (messageEvent)="addEven($event)"></app-game-control>
-    <app-even-numbers  *ngFor="let even of evenElements" [evenTag]="even" [ngClass]="{evenColor : even % 2 == 0}"></app-even-numbers>
+    <app-even-numbers  *ngFor="let even of evenElements" [evenTag]="even" 
+    [ngClass]="{evenColor : even % 2 == 0}"
+    [ngStyle]="{fontFamily : even % 2 == 0 ? 'FANTASY' : 'sans-serif'}"></app-even-numbers>
     <app-odd-numbers *ngFor="let odd of oddElements" [oddTag]="odd"></app-odd-numbers>
 
 </div>

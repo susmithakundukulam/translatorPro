@@ -19,6 +19,7 @@ import { BottomPageComponent } from './bottom-page/bottom-page.component';
 import { EvenNumbersComponent } from './even-numbers/even-numbers.component';
 import { OddNumbersComponent } from './odd-numbers/odd-numbers.component';
 import { GameControlComponent } from './game-control/game-control.component';
+import { BasicHighlightDirective } from 'src/basic-highlight/basic-highlight.directive';
 
 
 
@@ -39,7 +40,8 @@ import { GameControlComponent } from './game-control/game-control.component';
     BottomPageComponent,
     EvenNumbersComponent,
     OddNumbersComponent,
-    GameControlComponent
+    GameControlComponent,
+    BasicHighlightDirective
   ],
   imports: [
     BrowserModule,

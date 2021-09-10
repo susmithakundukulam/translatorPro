@@ -18,6 +18,7 @@ export class AppComponent {
   detailElements = [{fName:"", lName:""}];
   evenElements = [];
   oddElements=[];
+  loadedFeature = "recipe";
 
   addItem(details:{fName:string, lName:string}){
       this.detailElements.push({fName:details.fName, lName:details.lName});
@@ -29,6 +30,10 @@ export class AppComponent {
     }else{
       this.oddElements.push(number);
     }
+  }
+
+  onSelectedTab(feature: string){
+    this.loadedFeature = feature;
   }
 
   // public downloadAsPDF() {

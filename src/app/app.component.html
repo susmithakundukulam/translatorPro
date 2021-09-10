@@ -19,12 +19,12 @@
 </div> -->
 
 <!-- ****ANother Example for DataBinding deepDive input output decorator Complicated**** -->
-<div class="container">
+<!-- <div class="container">
     <app-game-control (messageEvent)="addEven($event)"></app-game-control>
-    <app-even-numbers  *ngFor="let even of evenElements" [evenTag]="even"></app-even-numbers>
+    <app-even-numbers  *ngFor="let even of evenElements" [evenTag]="even" [ngClass]="{evenColor : even % 2 == 0}"></app-even-numbers>
     <app-odd-numbers *ngFor="let odd of oddElements" [oddTag]="odd"></app-odd-numbers>
 
-</div>
+</div> -->
 
 <!-- for PDF test -->
 <!-- <div class="">
@@ -33,13 +33,13 @@
 
 
 <!-- **** for Angular project **** -->
-<!-- <app-header></app-header>
+<app-header (selectedFeature)="onSelectedTab($event)"></app-header>
 
 <div class="conatiner">
     <div class="row">
        <div class="col-md-12">
-           <app-recipes></app-recipes>
-           <app-shopping-list></app-shopping-list>          
+           <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+           <app-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-shopping-list>          
        </div>
     </div>
-</div> -->
+</div>

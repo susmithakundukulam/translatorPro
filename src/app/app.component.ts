@@ -20,6 +20,10 @@ export class AppComponent {
   oddElements=[];
   loadedFeature = "recipe";
 
+  setVal= false;
+  evenNumbers=[2,4,6];
+  value="100";
+
   addItem(details:{fName:string, lName:string}){
       this.detailElements.push({fName:details.fName, lName:details.lName});
   }

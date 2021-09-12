@@ -29,11 +29,34 @@
 </div> -->
 
 <!-- Attribute Directive Simple Eg -->
-<div class="container">             
+<!-- <div class="container">             
     <p appBasicHighlight>Hello Basic Attribute Directive</p>
-    <p appBetterHighlight>Hello Better Attribute Directive</p>
-    <p appMuchBetterHighlight>Hello Much Better Attribute Directive</p>
+    <p appBetterHighlight>Hello Better Attribute Directive using renderer2</p>
+    <p appMuchBetterHighlight>Hello Much Better Attribute Directive using HostBinding</p>
+    <p appMuchBetterHighlightbind [defaultColor]="'yellow'" [highlightColor]="'brown'">Hello Much Better Attribute Directive input binding</p>
+    <ng-template [ngIf]="true">
+        bbbbbbbbbbb
+    </ng-template>
+    <ng-template> 
+        bbbbbbbbbbb
+    </ng-template>
 </div>
+
+<div  *appMuchBetterHighlightCustomBind="setVal">
+    <li 
+        class="list-group-item" 
+        *ngFor="let even of evenNumbers">
+        {{even}}
+    </li>
+</div> -->
+
+<!-- switch case -->
+<!-- <div [ngSwitch]="value">
+    <p *ngSwitchCase="5">Value is 5</p>
+    <p *ngSwitchCase="10">Value is 10</p>
+    <p *ngSwitchCase="100">Value is 100</p>
+    <p *ngSwitchDefault>Value is Default</p>
+</div> -->
 
 <!-- for PDF test -->
 <!-- <div class="">

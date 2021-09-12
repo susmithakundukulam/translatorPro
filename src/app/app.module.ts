@@ -22,6 +22,8 @@ import { GameControlComponent } from './game-control/game-control.component';
 import { BasicHighlightDirective } from 'src/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { MuchBetterHighlightDirective } from './muchbetter-highlight/much-better-highlight.directive';
+import { MuchBetterHighlightbindDirective } from './muchbetter-highlight/much-better-highlightbind.directive';
+import { MuchBetterHighlightCustomBindDirective } from './muchbetter-highlight/much-better-highlight-custom-bind.directive';
 
 
 
@@ -45,7 +47,9 @@ import { MuchBetterHighlightDirective } from './muchbetter-highlight/much-better
     GameControlComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    MuchBetterHighlightDirective
+    MuchBetterHighlightDirective,
+    MuchBetterHighlightbindDirective,
+    MuchBetterHighlightCustomBindDirective
   ],
   imports: [
     BrowserModule,

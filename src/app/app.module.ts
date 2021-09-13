@@ -25,6 +25,9 @@ import { MuchBetterHighlightDirective } from './muchbetter-highlight/much-better
 import { MuchBetterHighlightbindDirective } from './muchbetter-highlight/much-better-highlightbind.directive';
 import { MuchBetterHighlightCustomBindDirective } from './muchbetter-highlight/much-better-highlight-custom-bind.directive';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { LoggingService } from './logging.service';
+import { TestForServiceComponent } from './test-for-service/test-for-service.component';
+import { TestForService1Component } from './test-for-service1/test-for-service1.component';
 
 
 
@@ -51,14 +54,16 @@ import { DropdownDirective } from './shared/dropdown.directive';
     MuchBetterHighlightDirective,
     MuchBetterHighlightbindDirective,
     MuchBetterHighlightCustomBindDirective,
-    DropdownDirective
+    DropdownDirective,
+    TestForServiceComponent,
+    TestForService1Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

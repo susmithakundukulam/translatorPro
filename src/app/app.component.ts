@@ -1,4 +1,5 @@
 import { Component, ComponentFactoryResolver } from '@angular/core';
+import { LoggingService } from './logging.service';
 
 // import jsPDF from 'jspdf';
 // import pdfMake from 'pdfmake/build/pdfmake';
@@ -23,6 +24,10 @@ export class AppComponent {
   setVal= false;
   evenNumbers=[2,4,6];
   value="100";
+
+  constructor(private loggingService: LoggingService){
+
+  }
 
   addItem(details:{fName:string, lName:string}){
       this.detailElements.push({fName:details.fName, lName:details.lName});
@@ -50,5 +55,7 @@ export class AppComponent {
   //   pdfMake.createPdf(documentDefinition).open(); 
      
   // }
-
+  seeLogEg(){
+    this.loggingService.logStatusChanged("Success");
+  }
 }

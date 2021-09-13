@@ -3,7 +3,7 @@ import { Directive, ElementRef, HostBinding, HostListener } from '@angular/core'
 @Directive({
   selector: '[appMuchBetterHighlight]'
 })
-export class MuchBetterHighlightDirective {
+export class MuchBetterHighlightDirective { 
 
   @HostBinding('style.backgroundColor') backgroundColor: string ='tranparent';
 

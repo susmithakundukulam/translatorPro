@@ -24,6 +24,7 @@ import { BetterHighlightDirective } from './better-highlight/better-highlight.di
 import { MuchBetterHighlightDirective } from './muchbetter-highlight/much-better-highlight.directive';
 import { MuchBetterHighlightbindDirective } from './muchbetter-highlight/much-better-highlightbind.directive';
 import { MuchBetterHighlightCustomBindDirective } from './muchbetter-highlight/much-better-highlight-custom-bind.directive';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 
 
@@ -49,7 +50,8 @@ import { MuchBetterHighlightCustomBindDirective } from './muchbetter-highlight/m
     BetterHighlightDirective,
     MuchBetterHighlightDirective,
     MuchBetterHighlightbindDirective,
-    MuchBetterHighlightCustomBindDirective
+    MuchBetterHighlightCustomBindDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

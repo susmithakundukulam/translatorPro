@@ -1,0 +1,7 @@
+<p>inactive-users works!</p>
+
+<div class="container" >
+    <p *ngFor="let users of inActiveUsers; let i = index">
+        <a href="#" (click)="setToActiveUsers(i)">{{users}}</a>
+    </p>
+</div>

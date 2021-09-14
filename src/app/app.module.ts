@@ -28,6 +28,10 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { LoggingService } from './logging.service';
 import { TestForServiceComponent } from './test-for-service/test-for-service.component';
 import { TestForService1Component } from './test-for-service1/test-for-service1.component';
+import { ActiveUsersComponent } from './active-users/active-users.component';
+import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import { UsersServiceService } from './users-service.service';
+import { CounterService } from './counter.service';
 
 
 
@@ -56,14 +60,16 @@ import { TestForService1Component } from './test-for-service1/test-for-service1.
     MuchBetterHighlightCustomBindDirective,
     DropdownDirective,
     TestForServiceComponent,
-    TestForService1Component
+    TestForService1Component,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [LoggingService],
+  providers: [LoggingService, UsersServiceService, CounterService], //no need of it if above angular 6
   bootstrap: [AppComponent]
 })
 export class AppModule { }

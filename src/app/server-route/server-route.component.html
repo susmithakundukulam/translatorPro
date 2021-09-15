@@ -1,7 +1,10 @@
-<p>server-route works!</p>
-<a href="#" routerLink="../servers">Reload Page</a><!-- correct-->
-<br>
-<a href="#" routerLink="servers">Reload Page</a><!-- wrong . taking relative path /server/server-->
-<br>
-<a href="#" routerLink="/servers">Reload Page</a><!-- correct-->
+<div class="container">
+    <p>server-route works!</p>
+    <a href="#" routerLink="../servers">Reload Page</a><!-- correct-->
+    <br>
+    <a href="#" routerLink="servers">Reload Page</a><!-- wrong . taking relative path /server/server-->
+    <br>
+    <a href="#" routerLink="/servers">Reload Page</a><!-- correct-->
 
+    <button class="btn btn-primary" (click)="onReloadPage()">Reload Page</button>
+</div>

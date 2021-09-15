@@ -38,10 +38,12 @@ import { HomeComponent } from './home/home.component';
 import { ServerRouteComponent } from './server-route/server-route.component';
 import { RouteheaderComponent } from './routeheader/routeheader.component';
 import { RouterModule, Routes } from '@angular/router';
+import { UserComponent } from './users/user/user.component';
 
 const appRoutes :Routes = [
   { path: '', component: HomeComponent},
   { path: 'users', component: UsersComponent},
+  { path: 'users/:id/:name', component: UserComponent},
   { path: 'servers', component: ServerRouteComponent}
 ]; 
 
@@ -76,7 +78,8 @@ const appRoutes :Routes = [
     UsersComponent,
     HomeComponent,
     ServerRouteComponent,
-    RouteheaderComponent
+    RouteheaderComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

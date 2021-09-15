@@ -33,8 +33,17 @@ import { InactiveUsersComponent } from './inactive-users/inactive-users.componen
 import { UsersServiceService } from './users-service.service';
 import { CounterService } from './counter.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { UsersComponent } from './users/users.component';
+import { HomeComponent } from './home/home.component';
+import { ServerRouteComponent } from './server-route/server-route.component';
+import { RouteheaderComponent } from './routeheader/routeheader.component';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const appRoutes :Routes = [
+  { path: '', component: HomeComponent},
+  { path: 'users', component: UsersComponent},
+  { path: 'servers', component: ServerRouteComponent}
+]; 
 
 @NgModule({
   declarations: [
@@ -63,12 +72,17 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     TestForServiceComponent,
     TestForService1Component,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    UsersComponent,
+    HomeComponent,
+    ServerRouteComponent,
+    RouteheaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [LoggingService, UsersServiceService, CounterService, ShoppingListService], //no need of it if above angular 6
   bootstrap: [AppComponent]

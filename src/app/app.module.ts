@@ -32,6 +32,7 @@ import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 import { UsersServiceService } from './users-service.service';
 import { CounterService } from './counter.service';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 
 
@@ -69,7 +70,7 @@ import { CounterService } from './counter.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [LoggingService, UsersServiceService, CounterService], //no need of it if above angular 6
+  providers: [LoggingService, UsersServiceService, CounterService, ShoppingListService], //no need of it if above angular 6
   bootstrap: [AppComponent]
 })
 export class AppModule { }

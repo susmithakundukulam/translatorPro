@@ -16,7 +16,8 @@
                 <li><a href="/servers" >Servers</a></li> -->
 
                 <!-- correct and basic method for routing -->
-                <li role= "presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/" class="active">Home</a></li>
+                <li role= "presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                ><a routerLink="/" class="active">Home</a></li>
                 <li role= "presentation" routerLinkActive="active"><a routerLink="/users" >Users</a></li> 
                 <li role= "presentation" routerLinkActive="active"><a [routerLink]="['/servers']" >Servers</a></li>
                 <router-outlet></router-outlet>

@@ -1,3 +1,5 @@
+
+<hr>
 <div class="container">
     <p>server-route works!</p>
     <a href="#" routerLink="../servers">Reload Page</a><!-- correct-->
@@ -5,6 +7,17 @@
     <a href="#" routerLink="servers">Reload Page</a><!-- wrong . taking relative path /server/server-->
     <br>
     <a href="#" routerLink="/servers">Reload Page</a><!-- correct-->
-
+    <hr>
     <button class="btn btn-primary" (click)="onReloadPage()">Reload Page</button>
+
+</div>
+<hr>
+<div>
+    <a [routerLink]="['/servers','5','edit']" [queryParams]="{allowEdit: '1'}">Load server edit</a>
+
+    <br>
+    <button class="btn btn-primary" (click)="onNavigatePage()">Reload Naviagte Page</button>
+    <br>
+    <button class="btn btn-primary" (click)="onNavigatePageQueryParams()">Route to queryParams</button>
+
 </div>

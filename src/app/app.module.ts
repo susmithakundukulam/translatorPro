@@ -39,13 +39,23 @@ import { ServerRouteComponent } from './server-route/server-route.component';
 import { RouteheaderComponent } from './routeheader/routeheader.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './users/user/user.component';
+import { InfoComponent } from './info/info.component';
+import { InfoEditComponent } from './info/info-edit/info-edit.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes :Routes = [
   { path: '', component: HomeComponent},
-  { path: 'users', component: UsersComponent},
-  { path: 'users/:id/:name', component: UserComponent},
-  { path: 'servers', component: ServerRouteComponent},
-  { path: 'servers/:id/edit', component: ServerRouteComponent}
+  { path: 'users', component: UsersComponent, children : [
+    { path: ':id/:name', component: UserComponent}
+  ]},
+  { path: 'servers', component: ServerRouteComponent, children : [
+    { path: ':id/edit', component: ServerRouteComponent}
+  ]},
+  { path: 'info', component: InfoComponent, children : [
+    { path: ':id/edit', component: InfoEditComponent}
+  ]},
+  {path : 'not-found', component: PageNotFoundComponent},
+  {path: '**' , redirectTo : 'not-found'}
 ]; 
 
 @NgModule({
@@ -80,7 +90,10 @@ const appRoutes :Routes = [
     HomeComponent,
     ServerRouteComponent,
     RouteheaderComponent,
-    UserComponent
+    UserComponent,
+    InfoComponent,
+    InfoEditComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

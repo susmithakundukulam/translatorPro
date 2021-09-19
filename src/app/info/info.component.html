@@ -1,0 +1,10 @@
+<p>info works!</p>
+
+<br>
+<p *ngFor="let i of info">
+    {{i.id}} : {{i.name}}
+     <button class="btn btn-primary" (click)="routeToEdit(i.id)">edit</button>
+     <br>
+</p>
+
+<router-outlet></router-outlet>  <!-- Doubt in using router-outlet-->

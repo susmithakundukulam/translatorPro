@@ -43,20 +43,6 @@ import { InfoComponent } from './info/info.component';
 import { InfoEditComponent } from './info/info-edit/info-edit.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-const appRoutes :Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'users', component: UsersComponent, children : [
-    { path: ':id/:name', component: UserComponent}
-  ]},
-  { path: 'servers', component: ServerRouteComponent, children : [
-    { path: ':id/edit', component: ServerRouteComponent}
-  ]},
-  { path: 'info', component: InfoComponent, children : [
-    { path: ':id/edit', component: InfoEditComponent}
-  ]},
-  {path : 'not-found', component: PageNotFoundComponent},
-  {path: '**' , redirectTo : 'not-found'}
-]; 
 
 @NgModule({
   declarations: [
@@ -98,8 +84,7 @@ const appRoutes :Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule
   ],
   providers: [LoggingService, UsersServiceService, CounterService, ShoppingListService], //no need of it if above angular 6
   bootstrap: [AppComponent]

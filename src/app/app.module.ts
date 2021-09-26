@@ -42,6 +42,8 @@ import { UserComponent } from './users/user/user.component';
 import { InfoComponent } from './info/info.component';
 import { InfoEditComponent } from './info/info-edit/info-edit.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthGuardService } from './auth-guard.service';
+import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -86,7 +88,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRoutingModule,
     FormsModule
   ],
-  providers: [LoggingService, UsersServiceService, CounterService, ShoppingListService], //no need of it if above angular 6
+  providers: [LoggingService, 
+    UsersServiceService, 
+    CounterService, 
+    ShoppingListService, 
+    AuthService,
+    AuthGuardService], //no need of it if above angular 6
   bootstrap: [AppComponent]
 })
 export class AppModule { }

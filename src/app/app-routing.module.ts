@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuardService } from './auth-guard.service';
 import { HomeComponent } from './home/home.component';
 import { InfoEditComponent } from './info/info-edit/info-edit.component';
 import { InfoComponent } from './info/info.component';
@@ -17,7 +18,7 @@ const routes: Routes = [
 { path: 'servers', component: ServerRouteComponent, children : [
   { path: ':id/edit', component: ServerRouteComponent}
 ]},
-{ path: 'info', component: InfoComponent, children : [
+{ path: 'info', canActivate : [AuthGuardService], component: InfoComponent, children : [                        
   { path: ':id/edit', component: InfoEditComponent}
 ]},
 {path : 'not-found', component: PageNotFoundComponent},

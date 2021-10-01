@@ -21,11 +21,12 @@ export class AppComponent {
   evenElements = [];
   oddElements=[];
   loadedFeature = "recipe";
-
+  cameraOn : boolean = false;
   setVal= false;
   evenNumbers=[2,4,6];
   value="100";
 
+  
   constructor(private loggingService: LoggingService){
 
   }
@@ -59,4 +60,7 @@ export class AppComponent {
   seeLogEg(){
     this.loggingService.logStatusChanged("Success");
   }
+
+
+
 }

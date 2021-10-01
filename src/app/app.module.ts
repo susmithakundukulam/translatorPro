@@ -44,6 +44,9 @@ import { InfoEditComponent } from './info/info-edit/info-edit.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuardService } from './auth-guard.service';
 import { AuthService } from './auth.service';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { CameraTestComponent } from './camera-test/camera-test.component';
+import { WebcamModule } from 'ngx-webcam';
 
 
 @NgModule({
@@ -81,12 +84,15 @@ import { AuthService } from './auth.service';
     UserComponent,
     InfoComponent,
     InfoEditComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RecipeStartComponent,
+    CameraTestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    WebcamModule
   ],
   providers: [LoggingService, 
     UsersServiceService, 

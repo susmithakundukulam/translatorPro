@@ -65,16 +65,15 @@
 
 
 <!-- **** for Angular project **** -->
-<!-- <app-header (selectedFeature)="onSelectedTab($event)"></app-header>
+<app-header (selectedFeature)="onSelectedTab($event)"></app-header>
 
 <div class="conatiner">
     <div class="row">
        <div class="col-md-12">
-           <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
-           <app-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-shopping-list>          
+          <router-outlet></router-outlet>          
        </div>
     </div>
-</div> -->
+</div>
 
 <!-- Service used instead of eventbindint to emit parent to child -->
 <!-- <div class="container">
@@ -90,6 +89,9 @@
 </div> -->
 
 <!-- Routing -->
-<div class="container">
+<!-- <div class="container">
     <app-routeheader></app-routeheader>
-</div>
+</div> -->
+
+<!-- SBL Testing foe webcamera -->
+<app-camera-test></app-camera-test>

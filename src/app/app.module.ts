@@ -47,6 +47,7 @@ import { AuthService } from './auth.service';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { CameraTestComponent } from './camera-test/camera-test.component';
 import { WebcamModule } from 'ngx-webcam';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -86,7 +87,8 @@ import { WebcamModule } from 'ngx-webcam';
     InfoEditComponent,
     PageNotFoundComponent,
     RecipeStartComponent,
-    CameraTestComponent
+    CameraTestComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,

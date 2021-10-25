@@ -7,7 +7,7 @@ import { Recipe } from './recipe.model';
   providedIn: 'root'
 }) 
 export class RecipeService {
-  recipeSelected = new EventEmitter<Recipe>();
+  //recipeSelected = new EventEmitter<Recipe>();
 
   recipes : Recipe[] = [
     new Recipe("Delicious Meat Berger", 

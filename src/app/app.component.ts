@@ -43,9 +43,7 @@ export class AppComponent {
     }
   }
 
-  onSelectedTab(feature: string){
-    this.loadedFeature = feature;
-  }
+
 
   // public downloadAsPDF() {
   //   const doc = new jsPDF();
